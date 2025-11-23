@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Social Media App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Login Signup Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-header">
+            <div class="logo"> SOCIAL MEDIA APP</div>
+            <div class="tagline">Connect with friends and share your thoughts</div>
+        </div>
+        <div class="auth-forms">
+            <div class="form-container">
+                <h2>Log In</h2>
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email address" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit" class="form-button">Log In</button>
+                </form>
+                <div class="divider"></div>
+                <button class="form-button secondary-button" id="showSignup">Create New Account</button>
+            </div>
+            <div class="form-container" id="signupForm" style="display: none;">
+                <h2>Sign Up</h2>
+                <form id="registerForm">
+                    <input type="text" id="signupName" placeholder="Full name" required>
+                    <input type="email" id="signupEmail" placeholder="Email address" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <button type="submit" class="form-button secondary-button">Sign Up</button>
+                </form>
+                <div class="divider"></div>
+                <button class="form-button" id="showLogin">Already have an account?</button>
+            </div>
+        </div>
+    </div>
+       <!-- Feed Page -->
+    <div class="social-container" id="socialFeed">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="app-title"> Social Media App</div>
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search posts...">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name" id="userDisplay">Welcome, User</span>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="logout-btn" id="logoutBtn">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+         <main class="container">
+            <div class="main-content">
+                <div class="feed">
+                    <div class="create-post">
+                        <textarea class="post-input" id="postText" placeholder="What's on your mind?" rows="3"></textarea>
+                        <div class="post-actions">
+                            <div>
+                                <button class="emoji-btn" id="emojiBtn"><i class="far fa-smile"></i></button>
+                                <button class="image-btn" id="imageBtn"><i class="far fa-image"></i></button>
+                            </div>
+                            <button class="post-btn" id="createPostBtn">Post</button>
+                        </div>
+                        <div class="emoji-picker" id="emojiPicker">
+                            <span class="emoji">😀</span>
+                            <span class="emoji">😂</span>
+                            <span class="emoji">❤️</span>
+                            <span class="emoji">👍</span>
+                            <span class="emoji">🔥</span>
+                            <span class="emoji">🎉</span>
+                        </div>
+                    </div>
+                        <div class="filters">
+                        <button class="filter-btn active" data-filter="latest">Latest First</button>
+                        <button class="filter-btn" data-filter="oldest">Oldest First</button>
+                        <button class="filter-btn" data-filter="most-liked">Most Liked</button>
+                    </div>
+                        <div class="posts-container" id="postsContainer">
+                        <main class="md:ml-64 md:mr-64 p-5"> 
+                        <h1 class="text-3xl mb-5 font-bold text-blue-700">Social Media App</h1>
+
+    <!-- POST BOX -->
+    <div class="bg-white shadow p-5 rounded-lg mb-5">
+        <textarea class="w-full border p-3 rounded-lg" placeholder="What's on your mind?"></textarea>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded mt-3">Post</button>
+    </div>
+
+       <!-- YOUR POSTS -->
+    <div class="posts-container" id="postsContainer">
+       
+    </div>
+</main>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+    <!-- Image URL -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add Image URL</h3>
+                <button class="close-btn" id="closeImageModal">&times;</button>
+            </div>
+            <input type="text" class="image-input" id="imageUrlInput" placeholder="Paste image URL here">
+            <button class="form-button" id="addImageBtn">Add Image</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h2>Social Media App</h2>
+            <p>Connect, share, and explore.</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="footer-copy">
+            © <span id="year"></span> Social Media App — All Rights Reserved.
+        </div>
+
+    </div>
+</footer>
+
+
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
